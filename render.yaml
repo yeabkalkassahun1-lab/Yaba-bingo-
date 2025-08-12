@@ -1,10 +1,10 @@
-# render.yaml - FINAL
 services:
   - name: yaba-bingo-db
     type: pserv
     plan: free
     postgres:
       version: 14
+
   - name: yaba-bingo-backend
     type: web
     plan: free
@@ -14,7 +14,10 @@ services:
     startCommand: "gunicorn core.wsgi:application"
     envVars:
       - key: DATABASE_URL
-        fromService: { type: pserv, name: yaba-bingo-db, property: connectionString }
+        fromService:
+          type: pserv
+          name: yaba-bingo-db
+          property: connectionString
       - key: SECRET_KEY
         generateValue: true
       - key: DEBUG
@@ -22,9 +25,16 @@ services:
       - key: WEB_CONCURRENCY
         value: 4
       - key: DJANGO_ALLOWED_HOSTS
-        fromService: { type: web, name: yaba-bingo-frontend, property: host }
+        fromService:
+          type: web
+          name: yaba-bingo-frontend
+          property: host
       - key: CORS_ALLOWED_ORIGINS
-        fromService: { type: web, name: yaba-bingo-frontend, property: url }
+        fromService:
+          type: web
+          name: yaba-bingo-frontend
+          property: url
+
   - name: yaba-bingo-frontend
     type: web
     plan: free

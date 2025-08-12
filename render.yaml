@@ -1,4 +1,4 @@
-# render.yaml - Version 3.1
+# render.yaml - FINAL
 services:
   - name: yaba-bingo-db
     type: pserv
@@ -9,8 +9,8 @@ services:
     type: web
     plan: free
     runtime: python
-    rootDir: backend # This forces Render to operate inside the 'backend' folder
-    buildCommand: "bash build.sh" # Using 'bash' is slightly more explicit
+    rootDir: backend
+    buildCommand: "bash build.sh"
     startCommand: "gunicorn core.wsgi:application"
     envVars:
       - key: DATABASE_URL

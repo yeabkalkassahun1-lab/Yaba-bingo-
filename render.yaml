@@ -33,7 +33,7 @@ services:
           type: web
           name: yaba-bingo-frontend
           property: url
- - name: yaba-bingo-frontend
+- name: yaba-bingo-frontend
     type: web
     plan: free
     runtime: static

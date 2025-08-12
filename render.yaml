@@ -22,7 +22,7 @@ services:
         generateValue: true
       - key: DEBUG
         value: False
-      - key: WEB_CONCURGRENcy
+      - key: WEB_CONCURRENCY
         value: 4
       - key: DJANGO_ALLOWED_HOSTS
         fromService:

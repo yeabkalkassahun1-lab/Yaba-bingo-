@@ -1,12 +1,10 @@
 services:
-  # Service 1: The Database
   - name: yaba-bingo-db
     type: pserv
     plan: free
     postgres:
       version: 14
 
-  # Service 2: The Django Backend
   - name: yaba-bingo-backend
     type: web
     plan: free
@@ -24,7 +22,7 @@ services:
         generateValue: true
       - key: DEBUG
         value: False
-      - key: WEB_CONCURRENCY
+      - key: WEB_CONCURGRENcy
         value: 4
       - key: DJANGO_ALLOWED_HOSTS
         fromService:
@@ -37,7 +35,6 @@ services:
           name: yaba-bingo-frontend
           property: url
 
-  # Service 3: The React Frontend
   - name: yaba-bingo-frontend
     type: web
     plan: free

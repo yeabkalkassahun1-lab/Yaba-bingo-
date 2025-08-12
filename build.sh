@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# build.sh - Simplified for use with rootDir in render.yaml
+# build.sh - FINAL
 set -o errexit
 
 pip install --upgrade pip

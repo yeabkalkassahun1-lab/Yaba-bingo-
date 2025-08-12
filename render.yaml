@@ -4,8 +4,7 @@ services:
     plan: free
     postgres:
       version: 14
-
-  - name: yaba-bingo-backend
+- name: yaba-bingo-backend
     type: web
     plan: free
     runtime: python
@@ -34,8 +33,7 @@ services:
           type: web
           name: yaba-bingo-frontend
           property: url
-
-  - name: yaba-bingo-frontend
+ - name: yaba-bingo-frontend
     type: web
     plan: free
     runtime: static

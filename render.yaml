@@ -1,6 +1,4 @@
-# A more robust YAML format to prevent mobile formatting errors.
-services:
-  - name: yaba-bingo-db
+- name: yaba-bingo-db
     type: pserv
     plan: free
     postgres: {version: 14}

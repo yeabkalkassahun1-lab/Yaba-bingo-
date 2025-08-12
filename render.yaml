@@ -1,5 +1,4 @@
 - name: yaba-bingo-db
-   plan: starter
     postgres: {version: 14}
 - name: yaba-bingo-backend
     type: web

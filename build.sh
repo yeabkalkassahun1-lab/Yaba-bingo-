@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-# build.sh - FINAL
-set -o errexit
+# A simple build script for Render
 
-pip install --upgrade pip
+set -o errexit  # Exit on error
+
 pip install -r requirements.txt
 
 python manage.py collectstatic --no-input
